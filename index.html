@@ -21,14 +21,16 @@
                 <span class="circle"></span> 
             </div>
 
-            <form action="https://formsubmit.co/jules.tennen@email.com" method="POST">
+            <form action="https://formsubmit.co/julestennen@email.com" method="POST">
                 <input type="email" name="email" placeholder="votre email" required>
                 <input type="text" name="nom" placeholder="votre nom" required>
-                <input type="text" name="object" placeholder="objet">
+                <input type="text" name="_subject" placeholder="objet">
                 <textarea name="message" placeholder="votre message à me transmettre"></textarea>
                 <button type="submit">Envoyer !</button>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
             </form>
-            
+
             <img src="images/arrow.svg" id="closeContactArrow" onclick="closeContact()">
 
 
