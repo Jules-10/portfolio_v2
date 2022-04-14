@@ -60,7 +60,7 @@ h1, h2{
     transform: rotate(90deg);
     filter: brightness(4);
     height: 10vh;
-    transition-duration: .5s;
+    transition-duration: 1s;
 }
 .page#home .left.closed #closeContactArrow{
     opacity: 0;
@@ -73,8 +73,10 @@ h1, h2{
 
 .page#home .left.closed form{
     position: absolute;
-    bottom: 1000vh;
-    transition-duration: .3s;
+    opacity: 0;
+    left: -1000vw;
+    transition-duration: 0;
+    transition-property: opacity;
 }
 
 .page#home .left.closed{
@@ -87,6 +89,7 @@ h1, h2{
     right: 10vw;
 }
 .page#home .left.opened form{
+    opacity: 1;
     position: inherit;
     display: flex;
     flex-direction: column;
@@ -95,8 +98,11 @@ h1, h2{
     padding: 10vh;
     justify-content: flex-start;
     margin-left: 0;
-    transition-duration: .3s;
+    transition-delay: .2s;
+    transition-duration: 1s;
+    transition-property: opacity;
 }
+
 form *{
     width: 45vw;
     height: 34px;
@@ -122,11 +128,18 @@ form textarea{
     width: 40px;
 }
 
+.page#home .left.opened ~.right{
+    opacity: 0;
+}
+
+
 .page#home .right{
+    opacity: 1;
     width: 75vw;
     align-items: flex-end;
     padding-right: 60px;
-    transition-duration: .5s;
+    transition-delay: .3s;
+    transition-duration: .3s;
 }
 
 .page#home .left #background{
