@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap'); 
+
+:root{
+    --bright-orange: #F6D5CB;
+    --dark: #111812;
+    --green: #395646;
+    --bright-green: #CEDED5;
+    --orange-action: #F88B63;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+body{
+    background-color: var(--bright-orange);
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+h1, h2{
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 12vh;
+}
+
+.page{
+    width: 100vw;
+    min-height: 100vh;
+}
+.page .left, .page .right{
+    min-height: 100vh;
+    animation: .3s;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex.vertical{
+    flex-direction: column;
+}
+.flex.horizontal{
+    flex-direction: row;
+}
+
+.left #closeContactArrow{
+    position: absolute;
+    transform: rotate(90deg);
+    filter: brightness(4);
+    height: 10vh;
+    transition-duration: .5s;
+}
+.page#home .left.closed #closeContactArrow{
+    opacity: 0;
+    right: -100vw;
+}
+.page#home .left.opened #closeContactArrow{
+    right: 15vw;
+    opacity: 1;
+}
+
+.page#home .left.closed form{
+    position: absolute;
+    bottom: 1000vh;
+    transition-duration: .3s;
+}
+
+.page#home .left.closed{
+    width: 25vw;
+}
+.page#home .left.opened{
+    width: 80vw;
+}
+.page#home .left.opened #background{
+    right: 10vw;
+}
+.page#home .left.opened form{
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 80vh;
+    padding: 10vh;
+    justify-content: flex-start;
+    margin-left: 0;
+    transition-duration: .3s;
+}
+form *{
+    width: 45vw;
+    height: 34px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bright-green);
+    resize: none;
+    outline: none;
+}
+form textarea{
+    height: 25vh;
+}
+.page#home .left.opened #header{
+    flex-direction: row-reverse;
+}
+.page#home .left.opened #header h4{
+    font-size: 6vh;
+}
+.page#home .left.opened #header .circle{
+    margin-right: 40px;
+    height: 40px;
+    width: 40px;
+}
+
+.page#home .right{
+    width: 75vw;
+    align-items: flex-end;
+    padding-right: 60px;
+    transition-duration: .5s;
+}
+
+.page#home .left #background{
+    position: absolute;
+    z-index: -1;
+    background-color: var(--green);
+    height: 250vh;
+    width: 300vh;
+    border-radius: 50%;
+    right: 70vw;
+    transition-duration: .5s;
+}
+
+.page#home h4{
+    color: var(--bright-orange);
+    font-size: 4vh;
+    font-weight: 500;
+    margin-left: -3vh;
+    margin-right: 3vh;
+    margin-bottom: 4px;
+    transition-duration: .3s;
+}
+.page#home .left .circle{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: var(--bright-orange);
+}
+
+.page#home #arrowBottom{
+    align-self: center;
+    justify-self: flex-end;
+    height: 10vh;
+    margin-top: -20vh;
+}
+
+
+
+
+
+.ellipsis{
+    z-index: -1;
+    position: absolute;
+    border: 5px solid var(--green);
+    border-radius: 50%;
+}
+
+.ellipsis#el1{
+    width: 50vw;
+    height: 180vh;
+    left: 85vw;
+    top: -60vh;
+}
+.ellipsis#el2{
+    width: 55vw;
+    height: 165vh;
+    left: 80vw;
+    top: 20vh;
+}
+
+
+
+
+#cursorCircle{
+    z-index: -1;
+    animation-duration: .5s;
+    position: absolute;
+    background-color: var(--orange-action);
+    opacity: 0.6;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition-duration: 3s;
+    transition: height, width;
+}
+
+::selection{
+    background-color: var(--orange-action);
+}

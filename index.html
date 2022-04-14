@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Portfolio Jules Tennenbaum</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+    <div class="page flex horizontal" id="home">
+
+        <div class="left flex vertical closed" onmouseover="cursorOnAction()" onclick="openContact()" id="contact">
+
+            <div id="background"></div>
+            <div class="flex horizontal" id="header">
+                <h4>me contacter</h4>
+                <span class="circle"></span> 
+            </div>
+
+            <form action="https://formsubmit.co/jules.tennen@email.com" method="POST">
+                <input type="email" name="email" placeholder="votre email" required>
+                <input type="text" name="nom" placeholder="votre nom" required>
+                <input type="text" name="object" placeholder="objet">
+                <textarea name="message" placeholder="votre message à me transmettre"></textarea>
+                <button type="submit">Envoyer !</button>
+            </form>
+            
+            <img src="images/arrow.svg" id="closeContactArrow" onclick="closeContact()">
+
+
+        </div>
+
+        <div class="right flex vertical"  onmouseover="cursorOutAction()">
+            <h1>Salut,<br>Je me présente ?</h1>
+        </div>
+
+        <a href="#page2" id="arrowBottom" onmouseover="cursorOnAction()">
+            <img src="images/arrow.svg">
+        </a>
+
+    </div>
+
+
+    <div class="page flex vertical" id="page2">
+
+    </div>
+
+
+
+
+    <div class="background">
+        <div class="ellipsis" id="el1"></div>
+        <div class="ellipsis" id="el2"></div>
+    </div>
+
+    <div id="cursorCircle"></div>
+
+    
+</body>
+
+<script src="script.js"></script>
+
+</html>
